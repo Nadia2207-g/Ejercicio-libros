@@ -1,0 +1,143 @@
+
+/* Reset básico */
+body, h2, h3, p, ul, form, input, button, label, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f8e1f4 0%, #e0c3fc 100%);
+    min-height: 100vh;
+    color: #4b2067;
+    padding: 32px 0;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #a259c6;
+    letter-spacing: 1px;
+}
+
+form {
+    background: #fff0fa;
+    max-width: 400px;
+    margin: 0 auto 32px auto;
+    padding: 28px 36px;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(162, 89, 198, 0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border: 2px solid #e0c3fc;
+}
+
+label {
+    font-weight: 600;
+    color: #b983ff;
+    margin-bottom: 4px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px 14px;
+    border: 1.5px solid #e0c3fc;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #f8e1f4;
+    color: #4b2067;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #a259c6;
+    outline: none;
+    background: #fff;
+}
+
+button[type="submit"], .agregar-carrito, .eliminar {
+    background: linear-gradient(90deg, #a259c6 60%, #f8e1f4 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(162, 89, 198, 0.08);
+}
+
+button[type="submit"]:hover, .agregar-carrito:hover, .eliminar:hover {
+    background: linear-gradient(90deg, #b983ff 60%, #f8e1f4 100%);
+    color: #a259c6;
+    transform: translateY(-2px) scale(1.04);
+}
+
+#lista-libros {
+    max-width: 500px;
+    margin: 0 auto 32px auto;
+    padding: 18px;
+    background: #f8e1f4;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(162, 89, 198, 0.06);
+    border: 2px solid #e0c3fc;
+}
+
+#lista-libros div {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 6px rgba(162, 89, 198, 0.06);
+    border: 1.5px solid #e0c3fc;
+}
+
+#carrito {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #f8e1f4;
+    border-radius: 18px;
+    padding: 18px;
+    min-height: 48px;
+    box-shadow: 0 2px 12px rgba(162, 89, 198, 0.06);
+    list-style: none;
+    border: 2px solid #e0c3fc;
+}
+
+#carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 6px rgba(162, 89, 198, 0.06);
+    border: 1.5px solid #e0c3fc;
+}
+
+#total {
+    max-width: 500px;
+    margin: 18px auto 0 auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #a259c6;
+    text-align: right;
+    background: #fff0fa;
+    border-radius: 10px;
+    padding: 8px 16px;
+    border: 1.5px solid #e0c3fc;
+}
+
+@media (max-width: 600px) {
+    form, #lista-libros, #carrito, #total {
+        max-width: 97vw;
+        padding: 12px;
+    }
+    form {
+        padding: 16px 8px;
+    }
+}
